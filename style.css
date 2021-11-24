@@ -55,3 +55,25 @@ body .imgBox img{
     font-weight: 400;
     color: #081E26;
 }
+
+.container .content {
+    display: flex;
+    width: 800px;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.container .content .content-box {
+    width: 50%;
+}
+
+.container .content-form-box {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    width: 50%;
+}
+
+.container .content-form-box form {
+    
+}

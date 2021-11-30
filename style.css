@@ -47,7 +47,7 @@ body .imgBox img{
 .container .text-header h1 {
     font-size: 36px;
     font-weight: 600;
-    color: #66c3ff;
+    color: #000000;
     text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
@@ -96,8 +96,7 @@ body .imgBox img{
 
 .container .content .content-box ul li h3 {
     text-decoration: none;
-    color: #53d8fb;
-    text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
+    color: #ff6b6b;
     font-size: 20px;
     font-weight: 600;
 }
@@ -118,24 +117,46 @@ body .imgBox img{
 }
 
 .container .content-form-box h2 {
-    font-size: 24px;
+    font-size: 32px;
+    color: #000000;
     margin: auto;
 }
 
 .container .content-form-box .input-box {
     position: relative;
     width: 100%;
+    margin-top: 20px;
 }
 
 .container .content-form-box .input-box input,
 .container .content-form-box .input-box textarea {
     width: 100%;
-    padding: 10px 0px;
     font-size: 16px;
-    margin-top: 20px;
+    padding: 4px 0px;
+    margin-top: 10px;
     box-sizing: border-box;
     border: none;
     outline: none;
     resize: none;
     border-bottom: 2px solid black;
+}
+
+.container .content-form-box .input-box label {
+    position: absolute;
+    left: 0;
+    color: #666;
+    padding: 6px 0px;
+    margin: 8px 0px;
+    font-size: 16px;
+    pointer-events: none;
+}
+
+.container .content-form-box .input-box input:focus ~ label,
+.container .content-form-box .input-box input:valid ~ label,
+.container .content-form-box .input-box textarea:focus ~ label, 
+.container .content-form-box .input-box textarea:valid ~ label {
+    transform: translateY(-24px);
+    transition: all 0.5s ease;
+    font-size: 14px;
+    color: #ff6b6b;
 }

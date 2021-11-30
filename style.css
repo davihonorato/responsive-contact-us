@@ -160,3 +160,11 @@ body .imgBox img{
     font-size: 14px;
     color: #ff6b6b;
 }
+
+.container .content-form-box .input-box input[type="submit"] {
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    color: #fff;
+    background-color: #ff6b6b;
+}

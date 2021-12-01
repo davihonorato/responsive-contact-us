@@ -7,6 +7,11 @@
     font-family: 'Poppins', sans-serif;
 }
 
+section {
+    position: relative;
+    min-height: 100vh;
+}
+
 body .imgBox::before {
     content: '';
     position: absolute;
@@ -26,6 +31,7 @@ body .imgBox img{
     height: 100%;
     width: 100%;
     object-fit: cover;
+    z-index: -1;
 }
 
 .container {
@@ -35,6 +41,7 @@ body .imgBox img{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    width: 100%;
     padding: 50px 100px;
     z-index: 1111;
 }
@@ -59,7 +66,7 @@ body .imgBox img{
 
 .container .content {
     display: flex;
-    width: 800px;
+    width: 100%;
     justify-content: center;
     margin-top: 40px;
 }
@@ -73,6 +80,7 @@ body .imgBox img{
 
 .container .content .content-box ul {
     list-style: none;
+    margin: 0;
 }
 
 .container .content .content-box ul li {
@@ -108,28 +116,28 @@ body .imgBox img{
     color: #fff;
 }
 
-.container .content-form-box {
+.container .content .content-form-box {
     display: flex;
     flex-direction: column;
     background-color: #fff;
-    width: 50%;
+    width: 40%;
     padding: 36px;
 }
 
-.container .content-form-box h2 {
+.container .content .content-form-box h2 {
     font-size: 32px;
     color: #000000;
     margin: auto;
 }
 
-.container .content-form-box .input-box {
+.container .content .content-form-box .input-box {
     position: relative;
     width: 100%;
     margin-top: 20px;
 }
 
-.container .content-form-box .input-box input,
-.container .content-form-box .input-box textarea {
+.container .content .content-form-box .input-box input,
+.container .content .content-form-box .input-box textarea {
     width: 100%;
     font-size: 16px;
     padding: 4px 0px;
@@ -141,7 +149,7 @@ body .imgBox img{
     border-bottom: 2px solid black;
 }
 
-.container .content-form-box .input-box label {
+.container .content .content-form-box .input-box label {
     position: absolute;
     left: 0;
     color: #666;
@@ -151,20 +159,32 @@ body .imgBox img{
     pointer-events: none;
 }
 
-.container .content-form-box .input-box input:focus ~ label,
-.container .content-form-box .input-box input:valid ~ label,
-.container .content-form-box .input-box textarea:focus ~ label, 
-.container .content-form-box .input-box textarea:valid ~ label {
+.container .content .content-form-box .input-box input:focus ~ label,
+.container .content .content-form-box .input-box input:valid ~ label,
+.container .content .content-form-box .input-box textarea:focus ~ label, 
+.container .content .content-form-box .input-box textarea:valid ~ label {
     transform: translateY(-24px);
     transition: all 0.5s ease;
     font-size: 14px;
     color: #ff6b6b;
 }
 
-.container .content-form-box .input-box input[type="submit"] {
+.container .content .content-form-box .input-box input[type="submit"] {
     padding: 10px;
     cursor: pointer;
     border: none;
     color: #fff;
     background-color: #ff6b6b;
+}
+
+@media only screen and (max-width: 830px) {
+    .container .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container .content .content-box, 
+    .container .content .content-form-box {
+        width: 100%;
+    }
 }

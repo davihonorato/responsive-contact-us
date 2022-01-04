@@ -41,8 +41,8 @@ body .imgBox img{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    width: 100%;
-    padding: 50px 100px;
+    max-width: 1200px;
+    margin: auto;
     z-index: 1111;
 }
 
@@ -178,6 +178,10 @@ body .imgBox img{
 }
 
 @media only screen and (max-width: 830px) {
+    .container .text-header {
+        padding: 10px;
+        margin-top: 10px;
+    }
     .container .content {
         flex-direction: column;
         align-items: center;

@@ -178,6 +178,9 @@ body .imgBox img{
 }
 
 @media only screen and (max-width: 830px) {
+    .container {
+        padding: 0px 30px;
+    }
     .container .text-header {
         padding: 10px;
         margin-top: 10px;
@@ -190,5 +193,11 @@ body .imgBox img{
     .container .content .content-box, 
     .container .content .content-form-box {
         width: 100%;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .container {
+        padding: 0px;
     }
 }
